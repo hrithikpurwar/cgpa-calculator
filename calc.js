@@ -42,40 +42,35 @@ function calculate(){
     }
   }
   outOfTen=parseInt(total1/numSubs);
-  var gpa;
+  var gp;
   switch(parseInt((outOfTen/10))*10){
     case 100:
     case 90:
-      gpa='S';
+      gp='10';
       break;
     case 80:
-      gpa='A';
+      gp='9';
       break;
     case 70:
-      gpa='B';
+      gp='8';
       break;
     case 60:
-      gpa='C';
+      gp='7';
       break;
     case 50:
-      gpa='D';
+      gp='6';
       break;
-    case 40:
-      gpa='E';
-      break;
-    case 30:
-      gpa='F';
-      break;
+
     default:
-      gpa='N';
+      gp='F/N';
       break;
   }
   if (flag==0){
-    gpa='invalid';
+    gp='invalid';
   }
-  console.log(gpa);
+  console.log(gp);
   var final=document.createElement("P");
-  final.innerText=gpa;
+  final.innerText=gp;
   final.id='output';
   finalMark.appendChild(final);
   total1=0;
